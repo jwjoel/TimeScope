@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/portal/portal",
+    "pages/index/index",
+    "pages/home/about",
+    "pages/me/me",
+    "pages/todo/todo",
+    "pages/post/post",
+    "pages/uniLogin/uniLogin",
+    "pages/account/account",
+    "pages/home/groups"
+  ],
+  "window": {
+    "navigationBarTitleText": "TimeScope",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom",
+    "wh-typeWriter": "/components/typeWriter/wh-typeWriter",
+    "wh-authorCard": "/components/authorCard/wh-authorCard",
+    "wh-addTips": "/components/addTips/wh-addTips"
+  },
+  "plugins": {
+    "htmltowxml": {
+      "version": "1.4.0",
+      "provider": "wxa51b9c855ae38f3c"
+    }
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/portal/portal",
+        "text": "Discover",
+        "iconPath": "images/moon.png",
+        "selectedIconPath": "images/moon.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "Timetable",
+        "iconPath": "images/icon_timetable.png",
+        "selectedIconPath": "images/icon_timetable.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "My Profile",
+        "iconPath": "images/icon_me.png",
+        "selectedIconPath": "images/icon_me.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

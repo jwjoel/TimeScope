@@ -1,0 +1,49 @@
+<view style="overflow:hidden">
+  <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      TimeScope
+      <image src='../../images/last.png' mode='aspectFit' class='back' bindtap='navLast'></image> 
+    </view>
+  </view>
+  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y >
+
+    <view class='hidden'>
+
+<view class="desc">
+
+    <view class="page__hd">
+        <view class="page__title">「TimeScope 时界」</view>
+    </view>
+    <view class="page__hd">
+        <view class="page__desc">TimeScope 顾名思义，旨在让学生群体更方便、快捷的掌握自己的时间，降低因为课程时间变动而影响安排的可能性。</view>
+        <view class="page__desc">Design by Jiawei Wang / UoBirmingham</view>
+    </view>
+  <text class="title"></text>
+  <view class="about_bottom">
+  <view class="weui-btn-area" bindtap='logOut'>
+        <button class="weui-btn" type="primary" bindtap='logOut'>Logout</button>
+  </view>
+  </view>
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__links">
+      <view class="weui-footer__link">TimeScope</view>
+    </view>
+    <view class="weui-footer__text">Copyright by Jovel © 2020</view>
+  </view>
+</view>
+</view>
+  </scroll-view>
+</view>
+<view class="bg-bubbles{{bg_display ? ' display' : ''}}">
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+</view>

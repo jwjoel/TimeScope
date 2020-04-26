@@ -1,0 +1,133 @@
+<!--pages/fortest/fortest.wxml-->
+<view class="mine-wrapper">
+  <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      TimeScope
+      <image src='../../images/last.png' mode='aspectFit' class='back' bindtap='navLast'></image> 
+    </view>
+  </view>
+  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y >
+
+    <view class='hidden'>
+      <!-- 正文 -->
+<view class="mine-wrapper">
+  <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">
+        <image wx:if="{{avatarUrl}}" style="border-radius:50%;" src="{{avatarUrl}}"></image>
+        <image wx:else bindtap="wxLogin" style="border-radius:50%;" src="../../images/avatar.png"></image>
+      </view>
+      <view class="text">
+        <text wx:if="{{nick}}" class='avatext'>{{nick}}</text>
+        <text wx:else bindtap="wxLogin" class='avatext'>Login</text>
+				<!--<button open-type='getUserInfo'  bindgetuserinfo="bindGetUserInfo">获取授权		</button>-->
+      </view>
+    </view>
+  </view>
+
+  <view class="list-wrapper">
+    <view class="weui-cells weui-cells_after-title">
+      <block>
+        <navigator bindtap="bindStuNum" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+             <image class='weui-cell__hd' src='../../images/school.png'></image>
+          </view>
+          <view class="weui-cell__bd"> University Account</view>
+          <view wx:if="{{stuName}}" class="weui-cell__ft weui-cell__ft_in-access connect_status">{{stuName}}</view>
+					<view wx:else class="weui-cell__ft weui-cell__ft_in-access connect_status">Not Connected </view>
+        </navigator>
+				<navigator bindtap="app.syncTable" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+              <image class='weui-cell__hd' src='../../images/sync.png'></image>
+          </view>
+          <view class="weui-cell__bd">Sync</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access connect_status">{{updateTime}}</view>
+        </navigator>
+      </block>
+        <navigator bindtap="openMap" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+					<view class="weui-cell__hd">
+               <image class='weui-cell__hd' src='../../images/group.png'></image>
+          </view>
+          <view class="weui-cell__bd"> Table Group</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+       
+        <navigator bindtap="feedback" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+               <image class='weui-cell__hd' src='../../images/blog.png'></image>
+          </view>
+          <view class="weui-cell__bd"> Feedback</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="/pages/home/about" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+					<view class="weui-cell__hd">
+               <image class='weui-cell__hd' src='../../images/info.png'></image>
+          </view>
+          <view class="weui-cell__bd"> About</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+  </view>
+</view>
+      <view class="weui-demo-dialog {{istrue ? 'weui-demo-dialog_show' : ''}}">
+          <view class="weui-mask" bindtap="closeDialog"></view>
+            <view class="weui-half-screen-dialog" catchtap="closeDialog">
+            <view class="weui-half-screen-dialog__hd">
+              <view class="weui-half-screen-dialog__hd__side">
+                <view bindtap="closeDialog" class="weui-icon-btn weui-icon-btn_close">Close</view>
+              </view>
+              <view class="weui-half-screen-dialog__hd__main">
+                <text class="weui-half-screen-dialog__title">User Agreement</text>
+                <text class="weui-half-screen-dialog__subtitle">Please login again after accept</text>
+              </view>
+              <view class="weui-half-screen-dialog__hd__side">
+   
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__bd">
+              <view class="weui-half-screen-dialog__desc">
+                Personal Data Collection.
+              </view>
+              <view class="weui-half-screen-dialog__tips">
+                Including but not limited to your Timetable, University name, etc. Please notice that your password will not be collected.
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__ft">
+                <button type="default" bindtap="closeDialog" class="weui-btn">Close</button>
+                <button type="primary" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" bindtap="onGetOpenid" class="weui-btn">Accept</button>
+            </view>
+          </view>
+        </view>        </view>
+          </scroll-view>
+</view>       
+
+      <view class="weui-demo-dialog {{fbistrue ? 'weui-demo-dialog_show' : ''}}">
+          <view class="weui-mask" bindtap="closeDialogfb"></view>
+            <view class="weui-half-screen-dialog" catchtap="stopEvent">
+            <view class="weui-half-screen-dialog__hd">
+              <view class="weui-half-screen-dialog__hd__side">
+                <view bindtap="closeDialogfb" class="weui-icon-btn weui-icon-btn_close">Close</view>
+              </view>
+              <view class="weui-half-screen-dialog__hd__main">
+                <text class="weui-half-screen-dialog__title">Feedback</text>
+                <text class="weui-half-screen-dialog__subtitle">Please read carefully</text>
+              </view>
+              <view class="weui-half-screen-dialog__hd__side">
+   
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__bd">
+              <view class="weui-half-screen-dialog__desc">
+                You will talk to customer service.
+              </view>
+              <view class="weui-half-screen-dialog__tips">
+                To ensure the quality of the service, your message may be collected.
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__ft">
+                <button type="default" bindtap="closeDialogfb" class="weui-btn">Close</button>
+                <button type="primary" open-type="contact" session-from="weapp" bindtap="closeDialogfb" class="weui-btn">Confirm</button>
+            </view>
+          </view>
+          
+          </view>

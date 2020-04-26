@@ -1,0 +1,65 @@
+<view class="mine-wrapper">
+  <view class='nav' style='background-color: #2d8cf0;height:{{navH}}px'>
+    <view class='nav-title' style='background-color: #2d8cf0;color: white;'>
+      TimeScope
+      <image src='../../images/backwt.png' style='background-color: #2d8cf0;' mode='aspectFit' class='back' bindtap='navLast'></image> 
+    </view>
+  </view>
+  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y >
+    <view class='hidden'>
+
+    <view class="content">
+        <view class="logo_bg">
+            <image mode="aspectFit" class="logo" src="../../images/sicon.png"></image>
+        </view>
+        <view class="login_content page__bd login">
+            <view class="switch_view">
+                <view bindtap="handleClicked" style="color:#2d8cf0;font-size: 37rpx;">Account</view>
+                <view bindtap="coming" style="color: #333333;font-size: 37rpx;">Token</view>
+            </view>
+            <block>
+        <view class="input_view"> 
+        <view class="weui-cell weui-cell_input{{stuid_focus ? ' focus' : ''}}">
+            <view class="weui-cell__hd">
+            <view class="weui-label" style="color: #333333;">Username</view></view>
+            <view class="weui-cell__bd">
+                <input id="stuid" class="weui-input" maxlength="10" placeholder="Uni Account" bindinput="inputInput" bindfocus="inputFocus" bindblur="inputBlur" value='{{stuNum}}'/>
+            </view>
+        </view>
+        <view class="weui-cell weui-cell_input{{stupwd_focus ? ' focus' : ''}}">
+            <text class="weui-label" style="color: #333333;">Password</text>
+            <view class="weui-cell__bd">
+                <input id="stupwd" class="weui-input" password maxlength="16" placeholder="Uni Password" bindinput="inputInput" bindfocus="inputFocus" bindblur="inputBlur"/>
+            </view>
+          </view>
+        <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label2" style="color: #333333;">University</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindCountryChange" value="{{universityIndex}}" range="{{universities}}">
+                        <view class="weui-select weui-select_in-select-after">{{universities[universityIndex]}}</view>
+                    </picker>
+                </view>
+        </view>       
+                    </view>
+            </block>
+            <view class="login_button" disabled="{{btn_disabled}}" loading="{{btn_loading}}" bindtap="getData">Login</view>
+        </view>
+          <view style="height: 100%; padding: 40rpx;">
+    <view class="header">
+      Notice
+    </view>
+    <view class="paragraph">
+      TimeScope will encrypt your University password to ensure safety.
+    </view>
+    <view class="header">
+      Information Needed?
+    </view>
+    <view class="paragraph">
+      That means that your University needs further adaptation. Please contact us via feedback if you'd like to help.
+    </view>
+    </view>
+    </view>   </view>
+              </scroll-view>
+</view>       

@@ -1,0 +1,283 @@
+
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logo {
+  width: 200rpx;
+  height: 166rpx;
+  margin-top: 300rpx;
+}
+.login_button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50rpx;
+  margin-bottom: 40rpx;
+  width: 400rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  color: #ffffff;
+  font-size: 34rpx;
+  background-color: #2d8cf0;
+}
+.account_bg {
+  width: 750rpx;
+  height: 488rpx;
+}
+.user_info {
+  margin-top: -485rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info_view {
+  margin-top: 50rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  width: 85%;
+  border-radius: 10rpx;
+  -webkit-box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.128);
+          box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.128);
+}
+.info_view .bio {
+  color: #7f7f7f;
+  font-size: 30rpx;
+  margin: 30rpx 30rpx 0 30rpx;
+  text-align: center;
+}
+.info_view .item_view {
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30rpx;
+  margin-top: 20rpx;
+}
+.info_view .item_view .line {
+  background-color: #7f7f7f;
+  width: 1rpx;
+  height: 40rpx;
+}
+.info_view .item_view .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  width: 30%;
+}
+.info_view .item_view .item .title {
+  text-align: center;
+  color: #333;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.info_view .item_view .item .desc {
+  text-align: center;
+  color: #7f7f7f;
+  font-size: 26rpx;
+}
+.list_view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  width: 85%;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  -webkit-box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.128);
+          box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.128);
+  padding: 10rpx 0;
+}
+.list_view .list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  width: 90%;
+  height: 90rpx;
+}
+.list_view .list .list_title {
+  text-align: center;
+  color: #333;
+  font-size: 31rpx;
+  font-weight: 350;
+}
+.list_title{
+  padding-left: 0px;
+}
+.list_view .list .list_content {
+  text-align: right;
+  color: #7f7f7f;
+  font-size: 28rpx;
+}
+.bottom_view {
+  height: 50rpx;
+}
+/* pages/fortest/fortest.wxss */
+
+
+
+.list-wrapper {
+
+  width: 100%;
+  top: 290px;
+}
+.weui-cell {
+  height: 25px;
+
+}
+.avatar-wrapper {
+  padding: 0px 0;
+
+
+} .avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+  
+} .avatar-wrapper .avatar image {
+  width: 80px;
+  height: 80px;
+} .avatar-wrapper .text {
+  text-align: center;
+  color: #000;
+} .weui-cell__hd image {
+  margin-right: 0px;
+  vertical-align: text-bottom;
+  width: 20px;
+  height: 20px;
+} 
+.weui-cell__hd {
+  padding-right: 0px;
+}
+.connect_status {
+  font-weight: 340;
+}
+.avatext {
+  font-weight: 380;
+  font-size: 135%;
+  font-stretch: expanded;
+  line-height: 10px;
+}
+.weui-cells::after{
+  content: none;
+  border-bottom: none;
+} .weui-cells::before{
+  border-top: none;
+
+} .weui-cell__bd {
+  padding-left: 10px;
+  color: #333333;
+}
+.hidden {
+  overflow: hidden;
+}
+.weui-demo-dialog{
+  visibility:hidden;
+  opacity:0;
+  transition:all .4s;
+}
+.weui-half-screen-dialog{
+  transition:all .4s;
+  transform:translateY(100%);
+}
+.weui-demo-dialog_show{
+  visibility:visible;
+  opacity:1;
+}
+.weui-demo-dialog_show .weui-half-screen-dialog{
+    transform:translateY(0);
+}
+

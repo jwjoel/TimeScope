@@ -1,0 +1,169 @@
+<view class="mine-wrapper">
+  <view class='nav' style='background-color: #2d8cf0;height:{{navH}}px'>
+    <view class='nav-title' style='background-color: #2d8cf0;color: white;'>
+      <image src='../../images/backwt.png' style='background-color: #2d8cf0;' mode='aspectFit' class='back' bindtap='navLast'></image> 
+    </view>
+  </view>
+
+    <view class='hidden'>
+
+<view class="content">
+<image class="account_bg" src="../../images/account_bg.png"></image>
+  <view class="user_info">
+   <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">
+        <image wx:if="{{avatarUrl}}" style="border-radius:50%;" src="{{avatarUrl}}"></image>
+        <image wx:else bindtap="wxLogin" style="border-radius:50%;" src="../../images/student.png"></image>
+      </view>
+      <view class="text" style="color: white;padding-top: 10px">
+        <text wx:if="{{nick}}" class='avatext'>「 {{nick}} 」</text>
+        <text wx:else bindtap="wxLogin" class='avatext'>Please Login</text>
+				<!--<button open-type='getUserInfo'  bindgetuserinfo="bindGetUserInfo">获取授权		</button>-->
+      </view>
+    </view>
+  </view>
+                    </view>
+                    <view class="info_view">
+
+                        <view class="item_view">
+                            <view class="item" bindtap="openMap">
+                                <view class="title">-</view>
+                                <view class="desc">Courses</view>
+                            </view>
+                            <view class="line"></view>
+                            <view class="item" bindtap="openMap">
+                                <view class="title">-</view>
+                                <view class="desc">Groups</view>
+                            </view>
+                            <view class="line"></view>
+                            <view class="item" bindtap="openMap">
+                                <view class="title">-</view>
+                                <view class="desc">Days</view>
+                            </view>
+                        </view>
+                    </view>
+                    
+                        <view class="list_view">
+                            <view class="list" bindtap="bindStuNum" data-e-tap-so="this" data-e-tap-a-a="{{NAVIGATE_TYPE.STAR}}">
+                            <view class="weui-cell__hd">
+                              <image class='weui-cell__hd' src='../../images/school.png'></image>
+                            </view>
+                             <view class="weui-cell__bd"> University Account</view>
+                            </view>
+                        </view>
+                    
+                    <view class="list_view">
+                        <view class="list" bindtap="syncTable" data-e-tap-so="this" data-e-tap-a-a="{{NAVIGATE_TYPE.STARRED_REPOS}}">
+                            <view class="list_title">Sync</view>
+                            <view class="weui-cell__hd">
+                              <image class='weui-cell__hd' style="height:12px;width:12px;vertical-align: 4%;" src='../../images/point.png'></image>
+                            </view>
+                        </view>
+                        <view class="list" bindtap="openMap" data-e-tap-so="this" data-e-tap-a-a="{{NAVIGATE_TYPE.ISSUES}}">
+                            <view class="list_title">Group Tables</view>
+                            <view class="weui-cell__hd">
+                              <image class='weui-cell__hd' style="height:12px;width:12px;vertical-align: 4%;" src='../../images/point.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="list_view">
+                        <view class="list">
+                            <view class="list_title">Account</view>
+                            <view wx:if="{{stuName}}" class="list_content">{{stuName}}</view>
+			                  		<view wx:else class="list_content">Not Connected </view>
+                        </view>
+                        <view class="list">
+                            <view class="list_title">Last Sync</view>
+                            <view wx:if="{{updateTime}}" class="list_content">{{updateTime}}</view>
+                            <view wx:else class="list_content">--</view>
+                        </view>
+                        <view class="list">
+                            <view class="list_title">Phone</view>
+                            <view class="list_content">{{userInfo.company.length > 0 ? userInfo.company : '--'}}</view>
+                        </view>
+                        <view class="list">
+                            <view class="list_title">Email</view>
+                            <view class="list_content">{{userInfo.location.length > 0 ? userInfo.location : '--'}}</view>
+                        </view>
+                    </view>
+                    <view class="list_view">
+                        <view class="list" bindtap="feedback">
+                            <view class="list_title">Feedback</view>
+                            <view class="weui-cell__hd"> 
+                              <image class='weui-cell__hd' style="height:12px;width:12px;vertical-align: 4%;" src='../../images/point.png'></image>
+                            </view>
+                        </view> 
+                        <view class="list" bindtap="about">
+                            <view class="list_title">About</view>
+                            <view class="weui-cell__hd">
+                              <image class='weui-cell__hd' style="height:12px;width:12px;vertical-align: 4%;" src='../../images/point.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="bottom_view"></view>
+                </view>
+
+
+    </view>
+
+      <view class="weui-demo-dialog {{istrue ? 'weui-demo-dialog_show' : ''}}">
+          <view class="weui-mask" bindtap="closeDialog"></view>
+            <view class="weui-half-screen-dialog" catchtap="closeDialog">
+            <view class="weui-half-screen-dialog__hd">
+              <view class="weui-half-screen-dialog__hd__side">
+                <view bindtap="closeDialog" class="weui-icon-btn weui-icon-btn_close">Close</view>
+              </view>
+              <view class="weui-half-screen-dialog__hd__main">
+                <text class="weui-half-screen-dialog__title">User Agreement</text>
+                <text class="weui-half-screen-dialog__subtitle">Please login again after accept</text>
+              </view>
+              <view class="weui-half-screen-dialog__hd__side">
+   
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__bd">
+              <view class="weui-half-screen-dialog__desc">
+                Personal Data Collection.
+              </view>
+              <view class="weui-half-screen-dialog__tips">
+                Including but not limited to your Timetable, University name, etc. Please notice that your password will not be collected.
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__ft">
+                <button type="default" bindtap="closeDialog" class="weui-btn">Close</button>
+                <button type="primary" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" bindtap="onGetOpenid" class="weui-btn">Accept</button>
+            </view>
+          </view>
+        </view>
+
+      <view class="weui-demo-dialog {{fbistrue ? 'weui-demo-dialog_show' : ''}}">
+          <view class="weui-mask" bindtap="closeDialogfb"></view>
+            <view class="weui-half-screen-dialog" catchtap="stopEvent">
+            <view class="weui-half-screen-dialog__hd">
+              <view class="weui-half-screen-dialog__hd__side">
+                <view bindtap="closeDialogfb" class="weui-icon-btn weui-icon-btn_close">Close</view>
+              </view>
+              <view class="weui-half-screen-dialog__hd__main">
+                <text class="weui-half-screen-dialog__title">Feedback</text>
+                <text class="weui-half-screen-dialog__subtitle">Please read carefully</text>
+              </view>
+              <view class="weui-half-screen-dialog__hd__side">
+   
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__bd">
+              <view class="weui-half-screen-dialog__desc">
+                You will talk to customer service.
+              </view>
+              <view class="weui-half-screen-dialog__tips">
+                To ensure the quality of the service, your message may be collected.
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__ft">
+                <button type="default" bindtap="closeDialogfb" class="weui-btn">Close</button>
+                <button type="primary" open-type="contact" session-from="weapp" bindtap="closeDialogfb" class="weui-btn">Confirm</button>
+            </view>
+          </view>
+           </view>  
+ </view>

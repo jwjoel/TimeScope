@@ -1,0 +1,159 @@
+<pullDownRefresh refreshing="{{refreshing}}" refreshed="{{refreshed}}" bind:refresh="refresh">
+<view>
+  <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      {{nav_title}}
+      <image src='../../images/list.png' mode='aspectFit' class='back' bindtap='openList'></image> 
+    </view>
+  </view>
+  <scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y >
+      <wh-addTips style="top:50px" text="「 Add to my Mini Program 」" duration="3"></wh-addTips>
+    <view class='hidden'>
+      <!-- 正文 -->
+
+
+
+<view class="page">
+
+  <view class="head corner">
+    <view class="weeks left">
+      <text>{{weeks}}</text>
+      <text></text>
+    </view>
+    <view class="week-title">
+      <text decode="{{true}}" wx:for="{{weekTitle}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+  <view class="placeholder"></view>
+  <view class="body">
+    <view class="sidebar corner">
+      <view>
+        <text>9:00</text>
+      </view>
+      <view>
+        <text>10:00</text>
+      </view>
+      <view>
+        <text>11:00</text>
+      </view>
+      <view>
+        <text>12:00</text>
+      </view>
+      <view>
+        <text>13:00</text>
+      </view>
+      <view>
+        <text>14:00</text>
+      </view>
+      <view>
+        <text>15:00</text>
+      </view>
+      <view>
+        <text>16:00</text>
+      </view>
+      <view>
+        <text>17:00</text>
+      </view>
+      <view>
+        <text>18:00</text>
+      </view>
+      <view>
+        <text>19:00</text>
+      </view>
+    </view>
+    <view class="content">
+      <!-- 循环 每天 --->
+    <view class="column course-wrap">
+    <block>
+      <view wx:for="{{list}}" wx:key="list">
+                <view data-activity="{{item.Date}}" data-activity="{{item.Activity}}" data-starttime="{{item.Start}}" data-endtime="{{item.End}}" data-room="{{item.Room}}" data-type="{{item.Type}}" data-staff="{{item.Staff}}" class="course" style="background-color: {{item.color}}; top: {{item.top}}rpx; width: 120rpx; left: {{item.left}}rpx; border-radius: 5px; height:{{item.height}}rpx;" id="{{item.id}}" catchtap='showDialog'>
+                <text data-activity="{{item.Date}}" data-activity="{{item.Activity}}" data-starttime="{{item.Start}}" data-endtime="{{item.End}}" data-room="{{item.Room}}" data-type="{{item.Type}}" data-staff="{{item.Staff}}" >{{item.shortname}}</text>
+               <!-- <text data-activity="{{item.Date}}" data-activity="{{item.Activity}}" data-starttime="{{item.Start}}" data-endtime="{{item.End}}" data-room="{{item.Room}}" data-type="{{item.Type}}" data-staff="{{item.Staff}}" >{{item.Start}} - {{item.End}}</text>--->
+                <text data-activity="{{item.Date}}" data-activity="{{item.Activity}}" data-starttime="{{item.Start}}" data-endtime="{{item.End}}" data-room="{{item.Room}}" data-type="{{item.Type}}" data-staff="{{item.Staff}}" >{{item.Room}}</text>
+              </view>
+      </view>
+
+    </block>
+    </view>
+     <!-- <image src='../../images/next.png' mode='aspectFit' class='post' bindtap='nextPage'></image> 
+      <image src='../../images/back.png' mode='aspectFit' class='post_left' bindtap='lastPage'></image> --->
+      <image src='' mode='aspectFit' class='bottom_line' bindtap='navBack'></image> 
+      <image src='' mode='aspectFit' class='bottom_shadow' bindtap='navBack'></image> 
+    </view>
+
+  </view>
+</view>
+  </view>
+  </scroll-view> 
+
+</view>
+      <view class="drag"  style="bottom:24px;right:25px;">
+    <image src="../../images/back.png" class="img-style" animation="{{animTopOne}}" bindtap="nextPage"></image>
+    <image src="../../images/next.png" class="img-style" animation="{{animTranspond}}" bindtap="lastPage"></image>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <image src="../../images/calmenu.png" class="img-style" animation="{{animCollect}}" bindtap="collect"></image>
+    </picker>
+    <image src="../../images/mep.png" class="img-plus-style" animation="{{animPlus}}" bindtap="plus"></image>
+    </view>
+      <view class="weui-demo-dialog {{istrue ? 'weui-demo-dialog_show' : ''}}">
+          <view class="weui-mask" bindtap="closeDialog"></view>
+            <view class="weui-half-screen-dialog" catchtap="stopEvent">
+            <view class="weui-half-screen-dialog__hd">
+              <view class="weui-half-screen-dialog__hd__side">
+                <view bindtap="closeDialog" class="weui-icon-btn weui-icon-btn_close">Close</view>
+              </view>
+              <view class="weui-half-screen-dialog__hd__main">
+                <text class="weui-half-screen-dialog__title">Course Details</text>
+                <text class="weui-half-screen-dialog__subtitle">{{start}} - {{end}}</text>
+              </view>
+              <view class="weui-half-screen-dialog__hd__side">
+   
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__bd">
+              <view class="weui-half-screen-dialog__desc">
+                {{activity}}
+              </view>
+              <view class="weui-half-screen-dialog__tips">
+                Course Type: {{type}}
+              </view>
+              <view class="weui-half-screen-dialog__tips">
+                Course Room: {{room}}
+              </view>
+              <view class="weui-half-screen-dialog__tips">
+                Course Staff: {{staff}}
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__ft">
+                <button type="primary" bindtap="closeDialog" class="weui-btn">Confirm</button>
+            </view>
+          </view>
+        </view>
+      <view class="weui-demo-dialog {{bindistrue ? 'weui-demo-dialog_show' : ''}}">
+          <view class="weui-mask" bindtap="closeDialog_2"></view>
+            <view class="weui-half-screen-dialog" catchtap="stopEvent">
+            <view class="weui-half-screen-dialog__hd">
+              <view class="weui-half-screen-dialog__hd__side">
+                <view bindtap="closeDialog_2" class="weui-icon-btn weui-icon-btn_close">Close</view>
+              </view>
+              <view class="weui-half-screen-dialog__hd__main">
+                <text class="weui-half-screen-dialog__title">Notice</text>
+                <text class="weui-half-screen-dialog__subtitle">Sync Failed</text>
+              </view>
+              <view class="weui-half-screen-dialog__hd__side">
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__bd">
+              <view class="weui-half-screen-dialog__desc">
+                Please bind University Account
+              </view>
+              <view class="weui-half-screen-dialog__tips">
+                You need to bind at least one account to sync your timetable.
+              </view>
+            </view>
+            <view class="weui-half-screen-dialog__ft">
+                <button type="primary" bindtap="closeDialog_2" bindtap="swichMe" class="weui-btn">Confirm</button>
+            </view>
+          </view>
+        </view>
+</pullDownRefresh>

@@ -1,0 +1,202 @@
+.desc{
+    background:white;
+    height:500px;
+}
+image {
+    margin-top: 1.17647059em;
+    height: 288rpx;
+    width: 288rpx;
+}
+text {
+    display: block;
+    font-size: 12pt;
+    margin-top: 40px;
+    text-align:center;
+    font-weight: 330;
+}
+
+.about_bottom {
+    bottom:0px;
+}
+
+.bg-bubbles {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 5px;
+}
+.bg-bubbles.display {
+    display: block;
+}
+.bg-bubbles view {
+    background-color: rgba(57, 58, 62, 0.15);
+    position: absolute;
+    width: 75rpx;
+    height: 75rpx;
+    line-height: 75rpx;
+    font-size: 75rpx;
+    bottom: -200rpx;
+    animation: square 20s infinite;
+    border-radius: 5px;
+}
+.bg-bubbles view:nth-child(1) {
+    left: 5%;
+    animation-delay: 2s;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(2) {
+    left: 15%;
+    width: 30rpx;
+    height: 30rpx;
+    animation-duration: 15s;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(3) {
+    background-color: transparent;
+    left: 25%;
+    animation-delay: 3s;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(4) {
+    background-color: rgba(57, 58, 62, 0.25);
+    left: 35%;
+    width: 180rpx;
+    height: 180rpx;
+    animation-delay: 4s;
+    animation-duration: 25s;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(5) {
+    left: 45%;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(6) {
+    background-color: rgba(57, 58, 62, 0.2);
+    left: 55%;
+    width: 110rpx;
+    height: 110rpx;
+    animation-delay: 6s;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(7) {
+    left: 65%;
+    width: 120rpx;
+    height: 120rpx;
+    animation-delay: 15s;
+    animation-duration: 30s;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(8) {
+    background-color: transparent;
+    left: 75%;
+    width: 180rpx;
+    height: 180rpx;
+    line-height: 180rpx;
+    font-size: 180rpx;
+    animation-delay: 6s;
+    animation-duration: 25s;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(9) {
+    background-color: rgba(57, 58, 62, 0.3);
+    left: 85%;
+    width: 90rpx;
+    height: 90rpx;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    border-radius: 15px;
+}
+.bg-bubbles view:nth-child(10) {
+    left: 95%;
+    width: 30rpx;
+    height: 30rpx;
+    animation-delay: 10s;
+    border-radius: 15px;
+}
+@keyframes square {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(-2000rpx) rotate(600deg);
+    }
+}
+
+/**/
+.desc{
+	padding: 1rem;
+}
+.title{
+	color: #318EE2;
+}
+.imagesize{
+ display:flex;
+ justify-content: center; 
+}
+.imagesize image { 
+  width:200rpx;
+  height:200rpx;
+}
+button{
+	margin-top: 1rem;
+}
+page{
+	line-height:1.3;
+}
+
+/*!
+ * WeUI v2.0.1 (https://github.com/weui/weui-wxss)
+ * Copyright 2019 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+ .weui-flex{-webkit-box-align:center;-webkit-align-items:center;align-items:center}.weui-cells{margin-top:0;opacity:0;-webkit-transform:translateY(-50%);transform:translateY(-50%);-webkit-transition:.3s;transition:.3s}.weui-cells:after,.weui-cells:before{display:none}.weui-cells_show{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}.weui-cell:before{right:15px}.kind-list__item{margin:10px 0;background-color:#fff;border-radius:2px;overflow:hidden}.kind-list__item:first-child{margin-top:0}.kind-list__img{width:30px;height:30px}.kind-list__item-hd{padding:20px;-webkit-transition:opacity .3s;transition:opacity .3s}.kind-list__item-hd_show{opacity:.4}.kind-list__item-bd{height:0;overflow:hidden}.kind-list__item-bd_show{height:auto}
+
+
+page{
+    background-color: #EDEDED;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+    position:fixed;
+    position:fixed;
+}
+.page__hd {
+    padding: 35px;
+    padding-bottom: 15px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    text-align: center;
+    padding:0 0 10px;
+    padding:0 0 calc(10px + constant(safe-area-inset-bottom));
+    padding:0 0 calc(10px + env(safe-area-inset-bottom));
+}
+
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
+.weui-cell_example:before{
+    left:52px;
+}
+
+

@@ -1,0 +1,74 @@
+/* pages/fortest/fortest.wxss */
+
+
+.mine-wrapper {
+  background-color: #ffffff;
+  height: 900px;
+  width: 100%;
+  position:fixed;
+}
+.list-wrapper {
+  position: fixed;
+  width: 100%;
+  top: 290px;
+}
+.weui-cell {
+  height: 25px;
+
+}
+.avatar-wrapper {
+  background: #ffffff;
+  padding: 25px 0;
+
+
+} .avatar-wrapper .avatar {
+  margin: 0 auto;
+  text-align: center;
+  
+} .avatar-wrapper .avatar image {
+  width: 100px;
+  height: 100px;
+} .avatar-wrapper .text {
+  text-align: center;
+  color: #000;
+} .weui-cell__hd image {
+  margin-right: 10px;
+  vertical-align: text-bottom;
+  width: 20px;
+  height: 20px;
+} 
+.connect_status {
+  font-weight: 340;
+}
+.avatext {
+  font-weight: 330;
+  font-size: 140%;
+  font-stretch: expanded;
+  line-height: 50px;
+}
+.weui-cells::after{
+  content: none;
+  border-bottom: none;
+} .weui-cells::before{
+  border-top: none;
+} .weui-cell__bd {
+  font-weight: 330;
+}
+
+.weui-demo-dialog{
+  visibility:hidden;
+  opacity:0;
+  transition:all .4s;
+}
+.weui-half-screen-dialog{
+  transition:all .4s;
+  transform:translateY(100%);
+}
+.weui-demo-dialog_show{
+  visibility:visible;
+  opacity:1;
+}
+.weui-demo-dialog_show .weui-half-screen-dialog{
+    transform:translateY(0);
+}
+
