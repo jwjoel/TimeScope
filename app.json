@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/portal/portal",
     "pages/index/index",
+    "pages/portal/portal",
     "pages/home/about",
     "pages/me/me",
     "pages/todo/todo",
