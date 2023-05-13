@@ -18,10 +18,17 @@ Page({
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         CommentShow: false,
+        postTags: [{name: "test"}],
+        postLikes: 10,
+        postVisits: 10,
+        postDate: "2001-05-28",
+        postContent: "22333",
+        CommentSwitch: true,
         ButtonTimer: '',//  按钮定时器
         LastTime: 60,
         CommentSwitch: true,
-		commentValue:''
+        commentValue:'',
+        postTitle: "NEW"
     },
 
     getUserInfo: function (e) {

@@ -17,6 +17,7 @@ Page({
         BlogName: app.globalData.BlogName,
         HaloUser: app.globalData.HaloUser,
         HaloPassword: app.globalData.HaloPassword,
+        bannerPost: [{id: "1", thumbnail: "https://raw.githubusercontent.com/aquanlerou/WeHalo/master/image/wehalo.jpg", title: "xxx", createTime: "hello"}],
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         userInfo: {},
@@ -26,6 +27,7 @@ Page({
         moreFlag: false,
         skin: true,
         pages: 0,
+        postList: [{id: "1", title: "xxx", thumbnail: "https://raw.githubusercontent.com/aquanlerou/WeHalo/master/image/wehalo.jpg"}],
         cardCur: 0,
         TabCur: 0,
         scrollLeft: 0,
@@ -332,9 +334,10 @@ Page({
             modalName: null
         })
     },
-    tabSelect2(e) {
+    tabSelect(e) {
 
         this.randomNum();
+        /*
         this.setData({
             postList: [],
         });
@@ -350,6 +353,7 @@ Page({
         
         //@todo 文章内容网络请求API数据
         request.requestGetApi(urlPostList, token, params, this, this.successPostList, this.failPostList);
+        */
 
         this.setData({
             TabCur: e.currentTarget.dataset.id,

@@ -64,19 +64,15 @@
     <view class="ad">
         <ad unit-id="adunit-da5b1800a9eae6d3" ad-intervals="30"></ad>
     </view>-->
-
+<!--
     <view class="cu-bar bg-white align-center">
         <view class="action border-title">
             <text class="text-xxl text-bold text-blue">Comment</text>
             <text class="bg-gradual-blue"></text>
         </view>
     </view>
-
-<!-- 评论接口 -->
-    <view class="cu-bar input" hidden="{{CommentSwitch}}">
-        <!-- <view class="action">
-            <text class="cuIcon-sound text-grey"></text>
-        </view> -->
+    
+    <view class="cu-bar input" hidden="false">
         <view class="flex justify-center" style="width:100%" wx:if="{{!hasUserInfo && canIUse}}"> 
             <view>
                 <button class="cu-btn bg-blue shadow-blur round"role="button"aria-disabled="false" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
@@ -97,7 +93,6 @@
     <view class="margin-bottom">
         <view class="margin-sm flex flex-wrap align-center" wx:for="{{commentList}}"  wx:for-item="commentList" wx:key wx:for-index="index" data-id="{{index}}">
             <view class="basis-xs">
-                <!-- <view class="cu-avatar lg round margin-left-sm" style="background-image:url({{commentList.email==''?commentList.authorUrl:'https://gravatar.loli.net/avatar/undefined/?s=256&d=mp'}});"></view> -->
                 <view class="cu-avatar lg round margin-left-sm" style="background-image:url({{commentList.email==''?commentList.authorUrl:'https://jovel.net/ava.jpg'}});"></view>
             </view>
             <view class="grid col-1 basis-xl {{commentList.falg?'solid-bottom':''}}" style="min-height:120rpx;">
@@ -114,6 +109,7 @@
         </view>
         <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</text>
     </view>
+    -->
 
 
 </scroll-view>
